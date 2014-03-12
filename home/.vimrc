@@ -1,8 +1,8 @@
 execute pathogen#infect()
 set tags+=./tags
 set foldlevel=1
-if filereadable("SpecificFile")
-  so .base_vimrc
+if filereadable("~/dotfiles/home/.base_vim")
+  so "~/dotfiles/home/.base_vim"
 endif
 " Test helpers from Gary Bernhardt's screen cast:
 " https://www.destroyallsoftware.com/screencasts/catalog/file-navigation-in-vim
