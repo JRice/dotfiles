@@ -1,7 +1,9 @@
 execute pathogen#infect()
 set tags+=./tags
 set foldlevel=1
-so ~/Google\ Drive/dev_files/.vimrc
+if filereadable("SpecificFile")
+  so .base_vimrc
+endif
 " Test helpers from Gary Bernhardt's screen cast:
 " https://www.destroyallsoftware.com/screencasts/catalog/file-navigation-in-vim
 " https://www.destroyallsoftware.com/file-navigation-in-vim.html
