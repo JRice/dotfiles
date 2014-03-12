@@ -24,7 +24,6 @@
   set nocin "no indent c-style
   set smartindent
   set smarttab
-  set colorcolumn=81
 " }
 
 " Word Completion {
@@ -127,12 +126,6 @@
   map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
   map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
   map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-" }
-
-" Commands {
-  " allows to save buffer with sudo
-  command W w !sudo tee % >/dev/null
-  " autocmd BufWritePre *.rb :%s/\\s\\+$//e
 " }
 
 " Rails {
