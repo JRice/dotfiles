@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/jrice/eol'
-let g:netrw_dirhist_2='/Users/jrice/eol/app/views/data_search'
-let g:netrw_dirhist_3='/Users/jrice/chef/mbl/cookbooks/ant'
-let g:netrw_dirhist_4='/Users/jrice/chef/mbl/cookbooks/ant/recipes'
