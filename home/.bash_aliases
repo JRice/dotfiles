@@ -63,7 +63,7 @@ alias en='eol;vim config/translations/en.yml'
 alias guard='eol;bundle exec guard'
 alias newtodos='git diff master | grep "+.*TODO"'
 # Edit aliases:
-alias ealias='pushd ~/dotfiles/home/ ; vim .bash_aliases ; git add . ; git commit ; popd ; source ~/.bash_aliases'
+alias ealias='pushd ~/dotfiles/home/ ; vim .bash_aliases ; git add . ; git commit ; popd ; homesick pull ; source ~/.bash_aliases'
 
 # Chef:
 alias rcstat='cd ~/chef/rc ; knife status'
