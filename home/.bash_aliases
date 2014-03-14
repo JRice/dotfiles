@@ -65,6 +65,9 @@ alias newtodos='git diff master | grep "+.*TODO"'
 # Edit aliases:
 alias ealias='pushd ~/dotfiles/home/ ; vim .bash_aliases ; git add .bash_aliases ; git commit ; git push ; popd ; homesick pull ; source ~/.bash_aliases'
 
+# Vagrant aliases:
+alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
+
 # Chef:
 alias rcstat='cd ~/chef/rc ; knife status'
 alias mblstat='cd ~/chef/mbl ; knife status'
