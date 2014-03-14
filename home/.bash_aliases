@@ -67,6 +67,7 @@ alias ealias='pushd ~/dotfiles/home/ ; git pull ; vim .bash_aliases ; git add .b
 
 # Vagrant aliases:
 alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
+alias vreup='vagrant destroy --force && vagrant up'
 
 # Chef:
 alias rcstat='cd ~/chef/rc ; knife status'
