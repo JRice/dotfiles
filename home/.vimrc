@@ -53,7 +53,7 @@ execute pathogen#infect()
   set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
   filetype plugin indent on   " Automatically detect file types.
   syntax on           " syntax highlighting
-  set mouse=h
+  set mouse=a
   set vb "makes visual bell instead of sound
 
   " Setting up the directories {
