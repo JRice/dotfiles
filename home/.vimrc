@@ -53,7 +53,8 @@ execute pathogen#infect()
   set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
   filetype plugin indent on   " Automatically detect file types.
   syntax on           " syntax highlighting
-  set mouse=a
+  " Don't use the mouse.  At all.  For anything.  Let the terminal copy/paste!
+  set mouse=
   set vb "makes visual bell instead of sound
 
   " Setting up the directories {
