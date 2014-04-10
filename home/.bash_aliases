@@ -62,6 +62,8 @@ alias zc='eol;zeus c'
 alias en='eol;vim config/translations/en.yml'
 alias guard='eol;bundle exec guard'
 alias newtodos='git diff master | grep "+.*TODO"'
+# Last tag, usu. the one to deploy:
+alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 # Edit aliases:
 alias ealias='pushd ~/dotfiles/home/ ; git pull ; vim .bash_aliases ; git add .bash_aliases ; git commit ; git push ; homesick pull ; popd ; source ~/.bash_aliases'
 
