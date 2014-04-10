@@ -64,7 +64,7 @@ alias guard='eol;bundle exec guard'
 alias newtodos='git diff master | grep "+.*TODO"'
 # Last tag, usu. the one to deploy:
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
-alias nexttag='lasttag | ruby -e \'puts STDIN.read.sub(/(\d\d)$/) { |m| "#{sprintf "%02d", $1.to_i + 1}" }\''
+alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
 # Edit aliases:
 alias ealias='pushd ~/dotfiles/home/ ; git pull ; vim .bash_aliases ; git add .bash_aliases ; git commit ; git push ; homesick pull ; popd ; source ~/.bash_aliases'
 
