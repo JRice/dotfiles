@@ -103,8 +103,7 @@ alias p="echo '** Running PHP Tests...' ; cd ~/eol;rake solr:start;cd ~/php_code
 alias s="rails s"
 alias zs="cd ~/eol; zeus rake solr:start ; zeus s"
 alias c="rails c"
-# I know this is weird, having it run in the foreground, but then backgrounding it... but it puts the output in the right place:
-alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t +foreground &"
+alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t;eol;rake solr:start"
 alias virtusql="cd /usr/local/virtuoso-opensource; ./bin/isql 1111 dba dba"
 alias bill="cd ~/bin ; ruby calc_bills.rb"
 
