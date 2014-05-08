@@ -93,7 +93,6 @@ alias app24="ssh eol-app24.rc.fas.harvard.edu"
 alias app26="ssh eol-app26.rc.fas.harvard.edu"
 alias stage='ssh eol_staging_deploy@staging.eol.org'
 alias bocce='ssh eol_staging_deploy@bocce.eol.org'
-alias stagesolr='ssh root@128.128.170.4'
 alias beast='ssh eol-thebeast.rc.fas.harvard.edu'
 alias services='ssh services.eol.org'
 alias app1='echo Should just get in; ssh eol-app1'
