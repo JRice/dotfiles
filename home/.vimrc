@@ -377,3 +377,6 @@ noremap ;; ;
 
 " Rebuild tags
 map qt :!ctags -R --exclude=.git --exclude=tmp --exclude=logs --exclude=app/assets/javascripts --exclude=doc --exclude=generate/vendor .
+
+" PHP remaps:
+autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
