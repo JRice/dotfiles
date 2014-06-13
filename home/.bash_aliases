@@ -102,8 +102,8 @@ alias p="echo '** Running PHP Tests...' ; cd ~/eol;rake solr:start;cd ~/php_code
 alias s="rails s"
 alias zs="cd ~/eol; zeus rake solr:start ; zeus s"
 alias c="rails c"
-alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t;eol;rake solr:start"
-alias virtuz="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t;eol;zeus start"
+alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t"
+alias zv="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t;eol;zeus start"
 alias virtusql="cd /usr/local/virtuoso-opensource; ./bin/isql 1111 dba dba"
 alias bill="cd ~/bin ; ruby calc_bills.rb"
 
