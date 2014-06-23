@@ -37,6 +37,7 @@ alias ggr='git grep -n --color'
 alias grdebug='git grep -n --color -l "^ *debugger"| grep -v vendor'
 alias epopulate="rake eol:db:populate"
 alias erebuild="rake eol:db:rebuild ; rake eol:db:recreate RAILS_ENV=test ; rake eol:db:recreate RAILS_ENV=test_master"
+alias eboottest="alias erebuild="rake scenarios:clear_tmp ; rake scenarios:load NAME=bootstrap RAILS_ENV=test"
 alias gni="cd ~/code/gni;clear"
 alias sp="./script/spec"
 alias 19='rvm 1.9.2-p290; echo "activating ruby 1.9.2"'
