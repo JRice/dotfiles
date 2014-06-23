@@ -100,6 +100,7 @@ alias backup='ssh -t backup1.core.cli.mbl.edu "cd /backup ; bash"'
 
 alias p="echo '** Running PHP Tests...' ; cd ~/eol;rake solr:start;cd ~/php_code; php tests/run_tests.php | tee ~/p | grep '^Exception '"
 alias s="rails s"
+alias zss="cd ~/eol; zeus rake solr:start"
 alias zs="cd ~/eol; zeus rake solr:start ; zeus s"
 alias c="rails c"
 alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t"
