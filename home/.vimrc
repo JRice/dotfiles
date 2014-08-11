@@ -380,3 +380,6 @@ map qt :!ctags -R --exclude=.git --exclude=tmp --exclude=logs --exclude=app/asse
 
 " PHP remaps:
 autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+" Add an 80-chr reminder:
+set colorcolumn=81
