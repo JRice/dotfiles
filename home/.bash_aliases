@@ -44,7 +44,6 @@ alias gni="cd ~/code/gni;clear"
 alias sp="./script/spec"
 alias 19='rvm 1.9.2-p290; echo "activating ruby 1.9.2"'
 alias 18='rvm 1.8.7;echo "activating ruby 1.8.7"'
-alias ctags="`brew --prefix`/bin/ctags"
 alias work="rake resque:work QUEUE='*'"
 
 alias dbm="rake db:migrate ; rake db:migrate RAILS_ENV=test ; rake db:migrate RAILS_ENV=test_master"
