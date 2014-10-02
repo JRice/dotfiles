@@ -70,7 +70,7 @@ alias newtodos='git diff master | grep "+.*TODO"'
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
 # Edit aliases:
-alias ealias='pushd ~/dotfiles/home/ ; git pull ; vim .bash_aliases ; git add .bash_aliases ; git commit ; git push ; homesick pull ; popd ; source ~/.bash_aliases'
+alias ealias='pushd . ; homesick cd dotfiles ; homesick pull dotfiles ; vim home/.bash_aliases ; homesick commit dotfiles ; homesick push dotfiles ; popd ; source ~/.bash_aliases'
 
 # Vagrant aliases:
 alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
