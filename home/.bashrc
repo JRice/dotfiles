@@ -117,7 +117,12 @@ if [ -f $HOME/.git_colors ]; then
   . $HOME/.git_colors
 fi
 
-if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; rvm default ; fi
+if [[ -s $HOME/.rvm/scripts/rvm ]] ; then
+  source $HOME/.rvm/scripts/rvm ; rvm default ;
+fi
 
 # Fix the version of PHP for the CLI to use 5.3:
-export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH"
+if ! brew_loc="$(type -p brew)" || [ -z "$brew_loc" ];
+then
+  export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH";
+fi
