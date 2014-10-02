@@ -1,5 +1,8 @@
 execute pathogen#infect()
 
+" TODO - change qs to <leader>
+" TODO - use <CR> instead of ^M
+
 " Matchit Macro {
 " Expands % character to move between not only matching () or {} but also def, if, while etc.
   runtime macros/matchit.vim
@@ -362,6 +365,8 @@ map qc :!bundle exec rails console
 map zc :!zeus console
 " Grep project:
 map qg :!git grep <cword>
+" Break part of a line (e.g. a comment) ABOVE this line:
+map qr sddOAP
 
 " Debug line:
 map ql Oputs "+" * 120
@@ -383,3 +388,6 @@ autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " Add an 80-chr reminder:
 set colorcolumn=81
+
+" And format text to 80 chrs:
+set textwidth=80

@@ -32,12 +32,14 @@ alias tmp="cd ~/tmp;clear"
 alias hl="heroku logs"
 alias sel_test='cd ~/code/eol && time rake test:acceptance:web'
 alias eol='cd ~/code/eol;clear'
+alias vol='cd ~/vagrant_eol; vagrant ssh'
 alias eolphp='cd ~/code/eol_php_code'
 alias ggr='git grep -n --color'
 alias grdebug='git grep -n --color -l "^ *debugger"| grep -v vendor'
 alias epopulate="rake eol:db:populate"
-alias erebuild="rake eol:db:rebuild ; rake eol:db:recreate RAILS_ENV=test ; rake eol:db:recreate RAILS_ENV=test_master"
-alias eboottest="alias erebuild="rake scenarios:clear_tmp ; rake scenarios:load NAME=bootstrap RAILS_ENV=test"
+alias erebuild="rake eol:db:rebuild && rake eol:db:recreate RAILS_ENV=test && rake eol:db:recreate RAILS_ENV=test_master"
+alias erebuildt="rake eol:db:rebuild --trace && rake eol:db:recreate RAILS_ENV=test --trace && rake eol:db:recreate RAILS_ENV=test_master --trace"
+alias eboottest="rake scenarios:clear_tmp ; rake scenarios:load NAME=bootstrap RAILS_ENV=test"
 alias gni="cd ~/code/gni;clear"
 alias sp="./script/spec"
 alias 19='rvm 1.9.2-p290; echo "activating ruby 1.9.2"'
@@ -46,7 +48,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias work="rake resque:work QUEUE='*'"
 
 alias dbm="rake db:migrate ; rake db:migrate RAILS_ENV=test ; rake db:migrate RAILS_ENV=test_master"
-alias rakess="rake eol:site_specific repo=git@github.com:mbl-cli/eol-private.git";
+alias rakess="rake eol:site_specific repo=git@github.com:mbl-cli/eol-private.git"
 alias sp="rescue rspec spec/models/ spec/controllers/ spec/helpers/ spec/lib/ spec/views/"
 alias zs="zeus test spec/models/ spec/controllers/ spec/helpers/ spec/lib/ spec/views/"
 alias top="top -o cpu"
@@ -91,6 +93,9 @@ alias app9="ssh eol-app9.rc.fas.harvard.edu"
 alias app10="ssh eol-app10.rc.fas.harvard.edu"
 alias app11="ssh eol-app11.rc.fas.harvard.edu"
 alias app12="ssh eol-app12.rc.fas.harvard.edu"
+alias app21="ssh eol-app21.rc.fas.harvard.edu"
+alias app22="ssh eol-app22.rc.fas.harvard.edu"
+alias app23="ssh eol-app23.rc.fas.harvard.edu"
 alias app24="ssh eol-app24.rc.fas.harvard.edu"
 alias app26="ssh eol-app26.rc.fas.harvard.edu"
 alias stage='ssh eol_staging_deploy@staging.eol.org'
@@ -123,7 +128,6 @@ function capbocce() {
   git push --tags;
   rake eol:site_specific;
   cap bocce_demo unicorn:stop;
-  cap bocce_demo unicorn:stop;
   cap bocce_demo deploy -S tag=$1
   echo "Tag: $1";
 }
@@ -135,7 +139,6 @@ function capstage() {
   git tag $1;
   git push --tags;
   rake eol:site_specific;
-  cap staging unicorn:stop;
   cap staging unicorn:stop;
   cap staging deploy -S tag=$1
   echo "Tag: $1";

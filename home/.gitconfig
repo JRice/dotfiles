@@ -27,10 +27,11 @@
 [branch]
   autosetupmerge=true
 [alias]
-  co=checkout
-  st=status -sb
-  ci=commit
-  br=branch
+  co = checkout
+  st = status -sb
+  ci = commit
+  br = branch
+  ls = ls-files
 [rerere]
 	enabled = 1
 [pull]
