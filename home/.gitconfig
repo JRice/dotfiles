@@ -4,7 +4,8 @@
 [github]
   user = JRice
 [core]
-  pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  # pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+  pager = vimdiff
 [color]
   branch=auto
   diff=auto
