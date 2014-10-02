@@ -5,7 +5,7 @@
   user = JRice
 [core]
   # pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
-  pager = vimdiff
+  pager = colordiff
 [color]
   branch=auto
   diff=auto
