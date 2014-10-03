@@ -123,3 +123,5 @@ if brew_loc="$(type -p brew)" && [ -z "$brew_loc" ];
 then
   export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH";
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
