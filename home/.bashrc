@@ -119,7 +119,7 @@ if [[ -s $HOME/.rvm/scripts/rvm ]] ; then
 fi
 
 # Fix the version of PHP for the CLI to use 5.3:
-if brew_loc="$(type -p brew)" || [ -z "$brew_loc" ];
+if brew_loc="$(type -p brew)" && [ -z "$brew_loc" ];
 then
   export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH";
 fi
