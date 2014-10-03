@@ -80,8 +80,6 @@ fi
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-#export JAVA_HOME=/usr
-export JRUBY_HOME=/usr/local/jruby
 export EC2_HOME=/usr/local/ec2-api-tools
 export SVN_EDITOR=vim
 export EDITOR=vim
@@ -89,8 +87,7 @@ export LC_CTYPE=en_US.UTF-8
 
 # MacPorts
 
-export PATH=/Users/jrice/.rvm/gems/ruby-1.9.3-p392/bin:/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/bin:$PATH:$JRUBY_HOME/bin:$EC2_HOME/bin
-# export PATH=$HOME/bin:/usr/local/bin:$PATH:$JRUBY_HOME/bin:$EC2_HOME/bin
+export PATH=/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/bin:$PATH:$EC2_HOME/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 export CDPATH=.:~/code
 export GEM_EDITOR="mvim"
@@ -122,7 +119,7 @@ if [[ -s $HOME/.rvm/scripts/rvm ]] ; then
 fi
 
 # Fix the version of PHP for the CLI to use 5.3:
-if ! brew_loc="$(type -p brew)" || [ -z "$brew_loc" ];
+if brew_loc="$(type -p brew)" || [ -z "$brew_loc" ];
 then
   export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH";
 fi
