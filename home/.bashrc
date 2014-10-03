@@ -115,7 +115,7 @@ if [ -f $HOME/.git_colors ]; then
 fi
 
 if [[ -s $HOME/.rvm/scripts/rvm ]] ; then
-  source $HOME/.rvm/scripts/rvm ; rvm default ;
+  source $HOME/.rvm/scripts/rvm; rvm default;
 fi
 
 # Fix the version of PHP for the CLI to use 5.3:
