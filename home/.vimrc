@@ -367,6 +367,8 @@ map zc :!zeus console
 map qg :!git grep <cword>
 " Break part of a line (e.g. a comment) ABOVE this line:
 map qr sddOAP
+map q] }zz
+map q[ {zz
 
 " Debug line:
 map ql Oputs "+" * 120
