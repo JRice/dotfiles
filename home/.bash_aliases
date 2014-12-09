@@ -46,6 +46,7 @@ alias mblstat='cd ~/chef/mbl && knife status'
 alias stage='ssh eol_staging_deploy@staging.eol.org'
 alias bocce='ssh eol_staging_deploy@bocce.eol.org'
 alias beast='ssh eol-thebeast.rc.fas.harvard.edu'
+alias harvesting="ssh eol-thebeast.rc.fas.harvard.edu 'ps -efaw | grep php | grep harvest_resources_cron_task.php$'"
 alias backup='ssh -t backup1.core.cli.mbl.edu "cd /backup && bash"'
 # PHP:
 alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/git/eol_php_code; php tests/run_tests.php | tee ~/p | grep '^Exception '"
