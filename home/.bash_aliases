@@ -48,6 +48,7 @@ alias tool='ssh eol-tools1.rc.fas.harvard.edu'
 alias stage='ssh eol_staging_deploy@staging.eol.org'
 alias bocce='ssh eol_staging_deploy@bocce.eol.org'
 alias beast='ssh eol-thebeast.rc.fas.harvard.edu'
+alias harv='ssh eol-thebeast.rc.fas.harvard.edu \'egrep "START|END" /var/www/eol_php_code/log/production.log\''
 alias harvesting="ssh eol-thebeast.rc.fas.harvard.edu 'ps -efaw | grep php | grep harvest_resources_cron_task.php$'"
 alias backup='ssh -t backup1.core.cli.mbl.edu "cd /backup && bash"'
 alias virt='ssh eol-virt01.rc.fas.harvard.edu'
