@@ -87,7 +87,7 @@ export LC_CTYPE=en_US.UTF-8
 
 # MacPorts
 
-export PATH=/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/bin:$PATH:$EC2_HOME/bin
+export PATH=$HOME/.rvm/gems/ruby-1.9.3-p392/bin:/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/bin:$PATH:$EC2_HOME/bin
 export MANPATH=/opt/local/share/man:$MANPATH
 export CDPATH=.:~/code
 export GEM_EDITOR="mvim"
