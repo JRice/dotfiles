@@ -125,4 +125,4 @@ then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export HIPCHAT_API_TOKEN="3eafbfff28df44e9629dcee4e3769c"
+export HIPCHAT_AUTH_TOKEN="3eafbfff28df44e9629dcee4e3769c"
