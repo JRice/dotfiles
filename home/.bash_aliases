@@ -59,6 +59,8 @@ alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/
 alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t"
 alias virtusql="cd /usr/local/virtuoso-opensource; ./bin/isql 1111 dba dba"
 alias bill="cd ~/bin && ruby calc_bills.rb"
+# Restarts:
+alias rebocce="cap bocce_demo unicorn:stop unicorn:start"
 
 function gcp() {
   git cherry-pick $1;
