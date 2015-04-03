@@ -62,6 +62,7 @@ alias virtusql="cd /usr/local/virtuoso-opensource; ./bin/isql 1111 dba dba"
 alias bill="cd ~/bin && ruby calc_bills.rb"
 # Restarts:
 alias rebocce="cap bocce_demo unicorn:stop unicorn:start"
+alias proxy="~/bin/proxy.sh"
 
 function gcp() {
   git cherry-pick $1;
