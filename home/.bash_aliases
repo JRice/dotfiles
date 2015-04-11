@@ -19,7 +19,9 @@ alias work="rake resque:work QUEUE='*'"
 alias dbm="rake db:migrate && rake db:migrate RAILS_ENV=test && rake db:migrate RAILS_ENV=test_master"
 alias rakess="rake eol:site_specific repo=git@github.com:mbl-cli/eol-private.git"
 alias mt='git mergetool'
+# Git tricks:
 alias gcp='git cherry-pick'
+alias branch_todo='git diff master | grep "^+.*TODO"'
 # Used when cherry-picking, and mergetool changes are successful:
 alias ccp='git clean -f; git commit -m "Merge after cherry-pick"; git push'
 alias z='cd ~/eol-vagrant && vagrant ssh --command "cd ~/git/eol; zeus"'
