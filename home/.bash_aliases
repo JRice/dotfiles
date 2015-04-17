@@ -8,9 +8,10 @@ alias cd..="cd .."
 alias dc="cd"
 alias top="top -o cpu"
 alias eol='cd ~/git/eol;clear'
+alias eolp='cd ~/git/eol_php_code;clear'
+alias eolphp='eolp'
 alias vol='cd ~/eol-vagrant; vagrant ssh'
 alias tram="cd ~/tramea"
-alias eolphp='cd ~/git/eol_php_code'
 alias ggr='git grep -n --color'
 alias epopulate="rake eol:db:populate"
 alias ereset="rake eol:reset RAILS_ENV=test"
