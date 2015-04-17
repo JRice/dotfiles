@@ -47,6 +47,7 @@ alias rcstat='cd ~/chef/rc && knife status'
 alias mblstat='cd ~/chef/mbl && knife status'
 # SSH aliases:
 alias ss='ssh si'
+alias si='ss'
 alias cache='ssh eol-cache1.rc.fas.harvard.edu'
 alias varn='ssh eol-cache1.rc.fas.harvard.edu'
 alias tool='ssh eol-tools1.rc.fas.harvard.edu'
