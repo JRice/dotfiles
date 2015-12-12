@@ -20,6 +20,7 @@ alias work="rake resque:work QUEUE='*'"
 alias dbm="rake db:migrate && rake db:migrate RAILS_ENV=test && rake db:migrate RAILS_ENV=test_master"
 alias rakess="rake eol:site_specific repo=git@github.com:mbl-cli/eol-private.git"
 alias mt='git mergetool'
+alias ctag='ctags --exclude=.git --exclude=tags --exclude=logs --exclude=doc --exclude=public --exclude=app/assets/javascripts --exclude=generate/vendor -R . $(bundle list --paths)'
 # Git tricks:
 alias gcp='git cherry-pick'
 alias branch_todo='git diff master | grep "^\(+.*TODO\|+++\)" | grep -B1 "TODO"'
