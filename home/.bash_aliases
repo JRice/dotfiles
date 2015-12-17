@@ -28,11 +28,15 @@ alias branch_todo='git diff master | grep "^\(+.*TODO\|+++\)" | grep -B1 "TODO"'
 alias ccp='git clean -f; git commit -m "Merge after cherry-pick"; git push'
 alias z='cd ~/eol-vagrant && vagrant ssh --command "cd ~/git/eol; zeus"'
 alias sc='eol;rails c'
+# Virtuoso:
+alias virtu="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; virtuoso-t"
+alias virtusql="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; ./bin/isql 1111 dba dba"
+alias bill="cd ~/bin && ruby calc_bills.rb"
 # Zeus:
 alias zc='eol;zeus c'
 alias zss="cd ~/git/eol; zeus rake solr:start"
 alias zs="cd ~/git/eol; zeus rake solr:start && zeus s"
-alias zv="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t;eol;zeus start"
+alias zv="virt;eol;zeus start"
 # Last tag, usu. the one to deploy:
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
@@ -49,22 +53,11 @@ alias mblstat='cd ~/chef/mbl && knife status'
 # SSH aliases:
 alias ss='ssh si'
 alias si='ss'
-alias cache='ssh eol-cache1.rc.fas.harvard.edu'
-alias varn='ssh eol-cache1.rc.fas.harvard.edu'
-alias tool='ssh eol-tools1.rc.fas.harvard.edu'
 alias stage='ssh eol_staging_deploy@staging.eol.org'
 alias bocce='ssh eol_staging_deploy@bocce.eol.org'
-alias beast='ssh eol-thebeast.rc.fas.harvard.edu'
-alias harv='ssh eol-thebeast.rc.fas.harvard.edu '"'"'egrep "START|END" /var/www/eol_php_code/log/production.log'"'"
-alias harvesting="ssh eol-thebeast.rc.fas.harvard.edu 'ps -efaw | grep php | grep harvest_resources_cron_task.php$'"
 alias backup='ssh -t backup1.core.cli.mbl.edu "cd /backup && bash"'
-alias virt='ssh eol-virt01.rc.fas.harvard.edu'
 # PHP:
 alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/git/eol_php_code; php tests/run_tests.php | tee ~/p | grep '^Exception '"
-# Virtuoso:
-alias virtu="cd /usr/local/virtuoso-opensource/var/lib/virtuoso/db;virtuoso-t"
-alias virtusql="cd /usr/local/virtuoso-opensource; ./bin/isql 1111 dba dba"
-alias bill="cd ~/bin && ruby calc_bills.rb"
 # Restarts:
 alias rebocce="cap bocce_demo unicorn:stop unicorn:start"
 alias proxy="~/bin/proxy.sh"
@@ -108,10 +101,6 @@ function just_branch() {
 function branch() {
   just_branch $1;
   capbocce $1.01;
-}
-
-function app() {
-  ssh eol-app$1.rc.fas.harvard.edu
 }
 
 if [ -f $HOME/.bash_aliases_local ]; then
