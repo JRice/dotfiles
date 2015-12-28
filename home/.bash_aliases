@@ -31,7 +31,7 @@ alias sc='eol;rails c'
 # Virtuoso:
 alias virtu="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; virtuoso-t"
 alias virtusql="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; ./bin/isql 1111 dba dba"
-alias bill="cd ~/bin && ruby calc_bills.rb"
+alias bill="ruby ~/bin/calc_bills.rb"
 # Zeus:
 alias zc='eol;zeus c'
 alias zss="cd ~/git/eol; zeus rake solr:start"
@@ -47,15 +47,9 @@ alias ebash='homesick pull dotfiles && homesick exec dotfiles vim home/.bashrc &
 alias egit='homesick pull dotfiles && homesick exec dotfiles vim home/.gitconfig && homesick commit dotfiles && homesick push dotfiles'
 # Vagrant:
 alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
-# Chef:
-alias rcstat='cd ~/chef/rc && knife status'
-alias mblstat='cd ~/chef/mbl && knife status'
 # SSH aliases:
 alias ss='ssh si'
 alias si='ss'
-alias stage='ssh eol_staging_deploy@staging.eol.org'
-alias bocce='ssh eol_staging_deploy@bocce.eol.org'
-alias backup='ssh -t backup1.core.cli.mbl.edu "cd /backup && bash"'
 # PHP:
 alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/git/eol_php_code; php tests/run_tests.php | tee ~/p | grep '^Exception '"
 # Restarts:
@@ -65,42 +59,6 @@ alias proxy="~/bin/proxy.sh"
 function gcp() {
   git cherry-pick $1;
   git mergetool;
-}
-
-function capbocce() {
-  git pull;
-  git rebase -i @{u};
-  git push;
-  git tag $1;
-  git push --tags;
-  rake eol:site_specific;
-  cap bocce_demo unicorn:stop;
-  cap bocce_demo deploy -S tag=$1
-  echo "Tag: $1";
-}
-
-function capstage() {
-  git pull;
-  git rebase -i @{u};
-  git push;
-  git tag $1;
-  git push --tags;
-  rake eol:site_specific;
-  cap staging unicorn:stop;
-  cap staging deploy -S tag=$1
-  echo "Tag: $1";
-}
-
-function just_branch() {
-  git branch $1;
-  git push origin $1;
-  git branch -D $1;
-  git checkout $1;
-  git tag $1.01;
-}
-function branch() {
-  just_branch $1;
-  capbocce $1.01;
 }
 
 if [ -f $HOME/.bash_aliases_local ]; then
