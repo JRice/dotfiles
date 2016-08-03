@@ -8,6 +8,7 @@ alias cd..="cd .."
 alias dc="cd"
 alias top="top -o cpu"
 alias eol='cd ~/git/eol;clear'
+alias web='cd ~/git/eol_website;clear'
 alias eolp='cd ~/git/eol_php_code;clear'
 alias eolphp='eolp'
 alias vol='cd ~/eol-vagrant; vagrant ssh'
@@ -55,6 +56,9 @@ alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/
 # Restarts:
 alias rebocce="cap bocce_demo unicorn:stop unicorn:start"
 alias proxy="~/bin/proxy.sh"
+
+export EOL_DEVEL_DB_USERNAME="root"
+export EOL_DEVEL_DB_PASSWORD=""
 
 function gcp() {
   git cherry-pick $1;
