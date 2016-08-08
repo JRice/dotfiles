@@ -59,7 +59,7 @@ alias proxy="~/bin/proxy.sh"
 
 export EOL_DEVEL_DB_USERNAME="root"
 export EOL_DEVEL_DB_PASSWORD=""
-export EOL_TRAITBANK_URL="http://neo4j:neo4j@localhost:7474"
+export EOL_TRAITBANK_URL="http://neo4j:4ConnectingDots@localhost:7474"
 
 function gcp() {
   git cherry-pick $1;
