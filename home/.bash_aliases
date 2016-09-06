@@ -8,7 +8,13 @@ alias cd..="cd .."
 alias dc="cd"
 alias top="top -o cpu"
 alias eol='cd ~/git/eol;clear'
+
 alias web='cd ~/git/eol_website;clear'
+alias solrup='web && rake sunspot:solr:start'
+alias solrdown='web && rake sunspot:solr:stop'
+alias rc='web && rails c'
+alias rs='web && rails s'
+
 alias eolp='cd ~/git/eol_php_code;clear'
 alias eolphp='eolp'
 alias vol='cd ~/eol-vagrant; vagrant ssh'
@@ -27,17 +33,10 @@ alias gcp='git cherry-pick'
 alias branch_todo='git diff master | grep "^\(+.*TODO\|+++\)" | grep -B1 "TODO"'
 # Used when cherry-picking, and mergetool changes are successful:
 alias ccp='git clean -f; git commit -m "Merge after cherry-pick"; git push'
-alias z='cd ~/eol-vagrant && vagrant ssh --command "cd ~/git/eol; zeus"'
-alias sc='eol;rails c'
 # Virtuoso:
 alias virtu="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; virtuoso-t"
 alias virtusql="cd /usr/local/Cellar/virtuoso/7.2.1/bin ; ./bin/isql 1111 dba dba"
 alias bill="ruby ~/bin/calc_bills.rb"
-# Zeus:
-alias zc='eol;zeus c'
-alias zss="cd ~/git/eol; zeus rake solr:start"
-alias zs="cd ~/git/eol; zeus rake solr:start && zeus s"
-alias zv="virt;eol;zeus start"
 # Last tag, usu. the one to deploy:
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
