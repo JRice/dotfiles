@@ -14,6 +14,7 @@ alias solrup='web && rake sunspot:solr:start'
 alias solrdown='web && rake sunspot:solr:stop'
 alias rc='web && rails c'
 alias rs='web && rails s'
+alias harv='cd ~/git/harvester;clear'
 
 alias eolp='cd ~/git/eol_php_code;clear'
 alias eolphp='eolp'
