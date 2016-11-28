@@ -7,14 +7,14 @@ alias l='ls $LS_OPTIONS -lAhF'
 alias cd..="cd .."
 alias dc="cd"
 alias top="top -o cpu"
-alias eol='cd ~/git/eol;clear'
+alias eol='cd ~/git/eol;atom .;clear'
 
-alias web='cd ~/git/eol_website;clear'
+alias web='cd ~/git/eol_website;atom .;clear'
 alias solrup='web && rake sunspot:solr:start'
 alias solrdown='web && rake sunspot:solr:stop'
 alias rc='web && rails c'
 alias rs='web && rails s'
-alias harv='cd ~/git/harvester;clear'
+alias harv='cd ~/git/harvester;atom .;clear'
 
 alias eolp='cd ~/git/eol_php_code;clear'
 alias eolphp='eolp'
