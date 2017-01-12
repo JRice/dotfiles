@@ -15,6 +15,7 @@ alias solrdown='web && rake sunspot:solr:stop'
 alias rc='web && rails c'
 alias rs='web && rails s'
 alias harv='cd ~/git/harvester;atom .;clear'
+alias reset='rake db:drop ; rake db:create ; rake db:migrate ; rake db:seed'
 
 alias eolp='cd ~/git/eol_php_code;clear'
 alias eolphp='eolp'
