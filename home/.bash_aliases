@@ -10,6 +10,7 @@ alias top="top -o cpu"
 alias eol='cd ~/git/eol;atom .;clear'
 
 alias web='cd ~/git/eol_website;atom .;clear'
+alias qweb='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
 alias solrup='web && rake sunspot:solr:start'
 alias solrdown='web && rake sunspot:solr:stop'
 alias rc='web && rails c'
