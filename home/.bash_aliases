@@ -14,7 +14,7 @@ alias qweb='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
 alias solrup='web && rake sunspot:solr:start'
 alias solrdown='web && rake sunspot:solr:stop'
 alias rc='web && rails c'
-alias rs='web && rails s'
+alias rs='source ~/bin/env.sh && web && rails s'
 alias harv='cd ~/git/harvester;atom .;clear'
 alias reset='rake db:drop ; rake db:create ; rake db:migrate ; rake db:seed'
 
