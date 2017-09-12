@@ -17,6 +17,7 @@ alias sdown='qweb && rake sunspot:solr:stop'
 alias rc='qweb && rails c'
 alias rs='source ~/bin/env.sh && qweb && rails s'
 alias rsh='harv && rails s'
+alias rch='harv && rails c'
 alias reset='rake db:drop ; rake db:create ; rake db:migrate ; rake db:seed'
 
 alias eolp='cd ~/git/eol_php_code;clear'
