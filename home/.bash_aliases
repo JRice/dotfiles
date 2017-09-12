@@ -10,12 +10,13 @@ alias top="top -o cpu"
 alias eol='cd ~/git/eol;atom .;clear'
 
 alias web='cd ~/git/eol_website;atom .;clear'
+alias harv='cd ~/git/harvester;atom .;clear'
 alias qweb='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
 alias sup='qweb && rake sunspot:solr:start'
 alias sdown='qweb && rake sunspot:solr:stop'
 alias rc='qweb && rails c'
 alias rs='source ~/bin/env.sh && qweb && rails s'
-alias harv='cd ~/git/harvester;atom .;clear'
+alias rsh='harv && rails s'
 alias reset='rake db:drop ; rake db:create ; rake db:migrate ; rake db:seed'
 
 alias eolp='cd ~/git/eol_php_code;clear'
