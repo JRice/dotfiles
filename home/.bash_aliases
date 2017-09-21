@@ -11,6 +11,7 @@ alias eol='cd ~/git/eol;atom .;clear'
 
 alias web='cd ~/git/eol_website;atom .;clear'
 alias harv='cd ~/git/harvester;atom .;clear'
+alias qh='cd ~/git/harvester;clear;echo "You''re working on the harvester."'
 alias qweb='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
 alias sup='qweb && rake sunspot:solr:start'
 alias sdown='qweb && rake sunspot:solr:stop'
