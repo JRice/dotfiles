@@ -61,6 +61,7 @@ alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/
 # Restarts:
 alias rebocce="cap bocce_demo unicorn:stop unicorn:start"
 alias proxy="~/bin/proxy.sh"
+alias deproxy="~/bin/deproxy.sh"
 
 export EOL_DEVEL_DB_USERNAME="root"
 export EOL_DEVEL_DB_PASSWORD=""
