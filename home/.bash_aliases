@@ -7,12 +7,12 @@ alias l='ls $LS_OPTIONS -lAhF'
 alias cd..="cd .."
 alias dc="cd"
 alias top="top -o cpu"
-alias eol='cd ~/git/eol;atom .;clear'
-
-alias web='cd ~/git/eol_website;atom .;clear'
-alias harv='cd ~/git/harvester;atom .;clear'
-alias qh='cd ~/git/harvester;clear;echo "You''re working on the harvester."'
-alias qweb='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
+alias eol='cd ~/git/eol;clear'
+alias harv='cd ~/git/harvester;clear;echo "You''re working on the harvester."'
+alias web='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
+alias ateol='eol;atom .'
+alias atweb='web;atom .'
+alias atharv='harv;atom .'
 alias sup='qweb && rake sunspot:solr:start'
 alias sdown='qweb && rake sunspot:solr:stop'
 alias rc='qweb && rails c'
@@ -47,6 +47,7 @@ alias bill="ruby ~/bin/calc_bills.rb"
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
 # Homesick editing:
+alias dots='homesick pull dotfiles && source ~/.bash_aliases'
 alias ealias='homesick pull dotfiles && homesick exec dotfiles vim home/.bash_aliases && homesick commit dotfiles && homesick push dotfiles && source ~/.bash_aliases'
 alias evim='homesick pull dotfiles && homesick exec dotfiles vim home/.vimrc && homesick commit dotfiles && homesick push dotfiles'
 alias ebash='homesick pull dotfiles && homesick exec dotfiles vim home/.bashrc && homesick commit dotfiles && homesick push dotfiles && source ~/.bashrc'
