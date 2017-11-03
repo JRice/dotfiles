@@ -70,6 +70,11 @@ export EOL_TRAITBANK_URL="http://neo4j:4ConnectingDots@localhost:7474"
 export EOL_DISCOURSE_URL="http://discuss.eol.org"
 export EOL_DISCOURSE_USER="jrice"
 export EOL_DISCOURSE_KEY="894b8d9b4a0f2c0f542862a23b6a92376fafb96de76a5cf4e5dd2cf10451d7bb"
+export EOL_IMAGE_REPO_URL="http://localhost:3000"
+export EOL_IMAGE_ORIGINAL="" 
+export EOL_IMAGE_JOIN="."
+export EOL_IMAGE_BY="x"
+
 
 function gcp() {
   git cherry-pick $1;
