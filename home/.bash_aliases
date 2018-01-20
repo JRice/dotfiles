@@ -9,6 +9,7 @@ alias dc="cd"
 alias top="top -o cpu"
 alias eol='cd ~/git/eol;clear'
 alias harv='cd ~/git/harvester;clear;echo "You''re working on the harvester."'
+alias imp='cd ~/go/src/github.com/eol/importer;clear;echo "GO! "'
 alias web='cd ~/git/eol_website;clear;echo "Silently entered directory..."'
 alias ateol='eol;atom .'
 alias atweb='web;atom .'
