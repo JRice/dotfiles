@@ -49,11 +49,13 @@ alias bill="ruby ~/bin/calc_bills.rb"
 alias lasttag='git tag | grep "^[0-9]\{4\}\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]$" | sort | tail -n 1'
 alias nexttag="lasttag | ruby -e 'puts STDIN.read.sub(/(\d\d)$/) { |m| sprintf(%q{%02d}, \$1.to_i + 1) } '"
 # Homesick editing:
-alias dots='homesick pull dotfiles && source ~/.bash_aliases'
-alias ealias='homesick pull dotfiles && homesick exec dotfiles vim home/.bash_aliases && homesick commit dotfiles && homesick push dotfiles && source ~/.bash_aliases'
-alias evim='homesick pull dotfiles && homesick exec dotfiles vim home/.vimrc && homesick commit dotfiles && homesick push dotfiles'
-alias ebash='homesick pull dotfiles && homesick exec dotfiles vim home/.bashrc && homesick commit dotfiles && homesick push dotfiles && source ~/.bashrc'
-alias egit='homesick pull dotfiles && homesick exec dotfiles vim home/.gitconfig && homesick commit dotfiles && homesick push dotfiles'
+alias homepull='homesick pull dotfiles'
+alias homepush='homesick commit dotfiles && homesick push dotfiles'
+alias dots='homepull && source ~/.bash_aliases'
+alias ealias='homepull && homesick exec dotfiles vim home/.bash_aliases && homepush && source ~/.bash_aliases'
+alias evim='homepull && homesick exec dotfiles vim home/.vimrc && homepush'
+alias ebash='homepull && homesick exec dotfiles vim home/.bashrc && homepush && source ~/.bashrc'
+alias egit='homepull && homesick exec dotfiles vim home/.gitconfig && homepush'
 # Vagrant:
 alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
 # SSH aliases:
