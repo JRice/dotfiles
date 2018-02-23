@@ -59,8 +59,8 @@ alias egit='homepull && homesick exec dotfiles vim home/.gitconfig && homepush'
 # Vagrant:
 alias vip="vagrant ssh -c \"ip address show eth0 | grep 'inet ' | sed -e 's/^.*inet //' -e 's/\/.*$//'\""
 # SSH aliases:
-alias ss='ssh si'
-alias si='ss'
+alias ss='ssh eol2'
+alias si='ssh si'
 # PHP:
 alias phpt="echo '** Running PHP Tests...' && cd ~/git/eol;rake solr:start;cd ~/git/eol_php_code; php tests/run_tests.php | tee ~/p | grep '^Exception '"
 # Restarts:
