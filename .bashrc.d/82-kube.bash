@@ -6,6 +6,7 @@ if command -v kubectl; then
   alias kc="kubectl get"
   alias kcc="kubectl config"
   alias kpod="kubectl get pods"
+  alias kcani="kubectl auth can-i"
 
   alias kcontext="kcc get-contexts" # NOT NEEDED: ; kcc current-context"
 fi
