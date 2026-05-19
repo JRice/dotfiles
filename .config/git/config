@@ -5,7 +5,7 @@
 [github]
   user = JRice
 [core]
-  pager = colordiff | less
+  pager = "command -v colordiff >/dev/null && colordiff | less || less"
   excludesfile = ~/.config/git/ignore
 [color]
   branch=auto
