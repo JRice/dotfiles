@@ -1,3 +1,7 @@
-home/.vim/tags
-home/.vim/bundle
-home/.vim/.*
+.vim/tags
+.vim/bundle
+.vim/.*
+code/
+.bashrc # This should be handled by the host OS, I don't want to override it.
+.bash_history
+old.*
