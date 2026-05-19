@@ -5,12 +5,13 @@
 [github]
   user = JRice
 [core]
-  pager = "command -v colordiff >/dev/null && colordiff | less || less"
+  pager = less -RFX
   excludesfile = ~/.config/git/ignore
 [color]
   branch=auto
   diff=auto
   status=auto
+  ui=auto
 [color "branch"]
   current=yellow reverse
   local=yellow
@@ -20,6 +21,7 @@
   frag=magenta bold
   old=red bold
   new=green bold
+  whitespace=red reverse
 [color "status"]
   added=yellow
   changed=green
