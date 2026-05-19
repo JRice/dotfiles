@@ -11,9 +11,10 @@ Your workspace is completely synchronized, and you can pull these exact configur
 processs:
 
 ```bash
-alias gitdot='/usr/bin/git --git-dir=$HOME/code/dotfiles/.git --work-tree=$HOME'
+mkdir -p ~/code/dotfiles
 git clone --separate-git-dir=$HOME/code/dotfiles/.git git@github.com:JRice/dotfiles.git /tmp/dotfiles-temp
 rsync -a /tmp/dotfiles-temp/ $HOME/
 rm -rf /tmp/dotfiles-temp
+alias gitdot='/usr/bin/git --git-dir=$HOME/code/dotfiles/.git --work-tree=$HOME'
 gitdot config --local status.showUntrackedFiles no
 ```
