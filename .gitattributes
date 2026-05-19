@@ -1,0 +1,9 @@
+# Enforce LF for all text files
+* text=auto eol=lf
+
+# Explicitly mark binary files so they aren't touched
+*.png binary
+*.jpg binary
+*.zip binary
+*.gz binary
+*.tgz binary
