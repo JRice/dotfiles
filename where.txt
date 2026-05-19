@@ -1,0 +1,40 @@
+-- DNS CONFIG ----------------
+42 datastore: eol.org, api, content, frontend, media, repo, editors, opendata, staging
+33 frontend1: beta-repo, beta, staging
+--- 10.252.248 160.111.248
+
+-- PROD ----------------
+PUB:
+42 eol-datastore1: app, nginx
+28 eol1: memcached
+29 eol2: elastic*
+44 eol-node2: [more memory] neo4j OLD
+45 eol-graph: [new machine] neo4j NEW
+37 enhydra: sql, workers
+HARV:
+43 eol-node1: [more memory] app, memcached
+41 dolomedes: sql
+SHARED:
+42 eol-datastore1: [/data for PROD] varnish5, ssl-term
+28 eol1: [/data for BETA]
+ELI:
+39 eol-archive: editors, opendata
+32 eol-search1: DO NOT USE, unstable
+38 eol-backend2: jenkins
+
+Shudown: sspub cdpub,v,s ; ssharv cdharv ; ssmem cdpub ; sses cdpub ; ssneo cdpub ; sssql cdpub ; ssharvsql cdharv
+
+-- BETA ----------------
+NOTE: as of Jan 2019, I'm using memcached on fe1 for BOTH pub and harv!
+
+HARV:
+33 eol-frontend1: app, search
+38 eol-backend2: sql
+PUB:
+35 eol-backend1: app, elastic*, redis, memcached, nginx
+38 eol-backend2: workers
+36 microdon: sql, neo4j
+SHARED (!):
+33 eol-frontend1: memcached, varn, ssl-term
+
+Shudown: ssbpub cdpub ; ssbharv cdharv ; ssbwork cdpub ; ssbneo cdpub ; ssbharvsql cdharv
