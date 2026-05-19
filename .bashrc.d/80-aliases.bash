@@ -24,8 +24,7 @@ alias gcpdone='git clean -f; git commit -m "Merge after cherry-pick"; git push'
 alias mt='git mergetool'
 
 # For editing the git in your homedir:
-alias gitdot='/usr/bin/git --git-dir=$HOME/code/dotfiles/ --work-tree=$HOME'
-gitdot config --local status.showUntrackedFiles no
+alias gitdot='/usr/bin/git --git-dir=$HOME/code/dotfiles/.git --work-tree=$HOME'
 
 # Fun stuff:
 alias weather="curl -s 'v2d.wttr.in/01702'"
