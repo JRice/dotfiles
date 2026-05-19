@@ -24,6 +24,7 @@ alias mt='git mergetool'
 
 # For editing the git in your homedir:
 alias gitdot='/usr/bin/git --git-dir=$HOME/code/dotfiles/.git --work-tree=$HOME'
+alias gdp="gitdot pull"
 
 # Fun stuff:
 alias weather="curl -s 'v2d.wttr.in/01702'"
