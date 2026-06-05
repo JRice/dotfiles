@@ -8,8 +8,7 @@ PUB:
 42 eol-datastore1: app, nginx
 28 eol1: memcached
 29 eol2: elastic*
-44 eol-node2: [more memory] neo4j OLD
-45 eol-graph: [new machine] neo4j NEW
+44 eol-node2: [more memory] neo4j
 37 enhydra: sql, workers
 HARV:
 43 eol-node1: [more memory] app, memcached

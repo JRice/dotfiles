@@ -1,5 +1,4 @@
 if command -v kubectl; then
-  export KUBECONFIG=~/.kube/eol-developer.kubeconfig
   export SOPS_AGE_KEY_FILE="$HOME/.config/sops/age/keys.txt"
   kubectl config use-context eol-dev
 
