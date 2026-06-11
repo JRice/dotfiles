@@ -17,6 +17,10 @@ alias dc="cd"
 alias pd="pushd"
 alias pop="popd"
 
+# Editing dot files:
+alias ealias="nvim ~/.bashrc.d/80-aliases.bash ; source ~/.bashrc.d/80-aliases.bash"
+alias ealiases="ealias"
+
 # Git:
 alias ggr='git grep -n --color'
 alias gcpdone='git clean -f; git commit -m "Merge after cherry-pick"; git push'
