@@ -1,9 +1,6 @@
-# Editing files:
-alias ealias="nvim ~/.aliases_eol ; source ~/.aliases_eol"
-alias ealiases="ealias"
-
 # SSH:
 if command -v ssh &> /dev/null; then
+  alias ealiase="vim ~/.bashrc.d/81-eol.bash ; source ~/.bashrc.d/81-eol.bash"
   alias ss='ssh si'
   alias sshhold="ssh -q -o ServerAliveInterval=90"
   alias sshthold="ssh -q -t -o ServerAliveInterval=90"
