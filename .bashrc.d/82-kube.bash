@@ -7,16 +7,26 @@ if command -v kubectl >/dev/null 2>&1; then
   alias ea="cd ~/code/kubecfg"
   alias eap="cd ~/code/kubecfg/publishing"
 
-  alias kc="kubectl get"
-  alias kcc="kubectl config"
-  alias kpod="kubectl get pods"
-  alias kcani="kubectl auth can-i"
-  alias kapp="kubectl apply -k overlays/staging"
-  alias kres="kubectl -n eol-staging rollout restart deploy/publishing-web"
+  alias kc="kubectl"
+  alias kcc="kc config"
+  alias kpod="kc get pods"
+  alias kcani="kc auth can-i"
+  alias kapp="ea && kc apply -k publishing/overlays/staging"
+  alias kstat="ea && kc rollout status deploy/publishing-nginx"
+  alias kres="kc -n eol-staging rollout restart deploy/publishing-web"
 
   alias kcontext="kcc get-contexts" # NOT NEEDED: ; kcc current-context"
 
-  alias kupneosecrets="sops --decrypt overlays/staging/neo4j-secrets.sops.yaml | kubectl apply -f -"
-  alias kuppubsecrets=" sops --decrypt overlays/staging/publishing-secrets.sops.yaml | kubectl apply -f -"
+  krc() {
+  kubectl -n eol-staging exec -it deploy/publishing-web -- sh -c '
+    export RAILS_MASTER_KEY=$(cat /run/secrets/publishing/RAILS_MASTER_KEY)
+    export NEO4J_USER=$(cat /run/secrets/publishing/NEO4J_USER)
+    export NEO4J_PASSWORD=$(cat /run/secrets/publishing/NEO4J_PASSWORD)
+    exec bundle exec rails console
+  '
+  }
+
+  alias kupneosecrets="sops --decrypt overlays/staging/neo4j-secrets.sops.yaml | kc apply -f -"
+  alias kuppubsecrets=" sops --decrypt overlays/staging/publishing-secrets.sops.yaml | kc apply -f -"
   alias kupsecrets="kupneosecrets && kuppubsecrets"
 fi
