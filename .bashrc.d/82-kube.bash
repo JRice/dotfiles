@@ -9,13 +9,15 @@ if command -v kubectl >/dev/null 2>&1; then
 
   alias kc="kubectl"
   alias kcc="kc config"
-  alias kpod="kc get pods"
+  alias kpods="kc get pods -o wide"
   alias kcani="kc auth can-i"
+
   alias kapp="ea && kc apply -k publishing/overlays/staging"
   alias kstat="ea && kc rollout status deploy/publishing-nginx"
-  alias kres="kc -n eol-staging rollout restart deploy/publishing-web"
+  alias krestart="kc -n eol-staging rollout restart deploy/publishing-web"
 
-  alias kcontext="kcc get-contexts" # NOT NEEDED: ; kcc current-context"
+  alias kclear="rm -rf ~/.kube/cache/" # Clears the cache.
+  alias kcontext="kcc get-contexts"
 
   krc() {
   kubectl -n eol-staging exec -it deploy/publishing-web -- sh -c '
