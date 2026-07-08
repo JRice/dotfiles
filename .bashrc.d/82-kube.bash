@@ -36,5 +36,5 @@ if command -v kubectl >/dev/null 2>&1; then
   alias kuppubsecrets=" sops --decrypt overlays/staging/publishing-secrets.sops.yaml | kc apply -f -"
   alias kupsecrets="kupneosecrets && kuppubsecrets"
 
-  alias comaliask="pushd ~ ; git add ~/.bashrc.d/82-kube.bash ; git ci -m 'Updating k8s aliases' ; git push ; popd"
+  alias comaliask="pushd ~ ; git add ~/.bashrc.d/82-kube.bash ; git ci ; git push ; popd"
 fi
