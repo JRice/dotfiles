@@ -64,3 +64,5 @@ Session.vim
 # Logs and databases (Generic safety nets)
 *.log
 *.sqlite
+
+**/.claude/.cc-writes/
