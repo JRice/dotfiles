@@ -34,3 +34,11 @@ bindkey -- "${terminfo[kend]:-^[[F}"   end-of-line
 # --- Personal aliases/functions (ported from ~/.bashrc.d) --------------------
 for f in ~/.zshrc.d/*.zsh(N); do source "$f"; done
 unset f
+
+# I'm only running Postgres on a non-standard port:
+export PGPORT=5433
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/jrice/.docker/completions $fpath)
+autoload -Uz compinit
+(( ${+_comps[docker]} )) || compinit
+# End of Docker CLI completions
