@@ -11,7 +11,13 @@ alias ampdburl="heroku config:get DATABASE_URL -a andovermath"
 alias ecdburl="heroku config:get DATABASE_URL -a academycompass"
 
 # Consoles!
+alias rcec="ec && heroku run rails console -a academycompass"
 alias rcecs="ec && heroku run rails console -a educompass-staging"
+alias rcamp="ec && heroku run rails console -a andovermath"
+alias rcamps="ec && heroku run rails console -a amplify-staging"
+
+alias dbecs="heroku pg:psql STAGING_DB -a educompass-staging"
+alias dbamps="heroku pg:psql STAGING_DB -a amplify-staging"
 
 # Logs!
 alias logec="heroku logs --tail -a academycompass --dyno router"
