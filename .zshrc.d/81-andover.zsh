@@ -15,7 +15,9 @@ alias rcecs="ec && heroku run rails console -a educompass-staging"
 
 # Logs!
 alias logec="heroku logs --tail -a academycompass --dyno router"
+alias logecs="heroku logs --tail -a educompass-staging --dyno router"
 alias logamp="heroku logs --tail -a andovermath --dyno router"
+alias logamps="heroku logs --tail -a amplify-staging --dyno router"
 
 # Deploy-related:
 alias depecs="cd ~/code/educompass && git push origin main && git push staging main"
