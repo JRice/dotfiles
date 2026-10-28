@@ -3,6 +3,7 @@ alias oldec="cd ~/code/academycompass"
 alias ec="cd ~/code/educompass"
 alias amp="cd ~/code/amplify"
 alias rs="bundle exec rspec"
+
 # Set up a local server on port 5000 (OSX can't do concurrency):
 alias rserv="WEB_CONCURRENCY=0 bin/rails server -p 5000"
 
@@ -35,6 +36,14 @@ alias maintec="heroku maintenance:on --app academycompass"
 alias maintoffec="heroku maintenance:off --app academycompass"
 alias releasesec="heroku releases --app academycompass"
 alias rollbackec="heroku rollback --app academycompass" # You should probably specify a version
+
+gpsb() {
+  if [[ -z "$1" ]]; then
+    echo "usage: gpsb <branch> [extra git push args, e.g. --force]" >&2
+    return 1
+  fi
+  git fetch origin && git push staging "origin/$1:refs/heads/main" "${@:2}"
+}
 
 # Up/Down:
 alias upecs="heroku ps:scale web=1 --app educompass-staging"
