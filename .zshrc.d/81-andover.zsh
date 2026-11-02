@@ -1,8 +1,11 @@
-alias ealiaspa="$EDITOR ~/.zshrc.d/81-andover.zsh ; source ~/.zshrc.d/81-andover.zsh"
+alias ealiaspa="$EDITOR ~/.zshrc.d/81-andover.zsh ; source ~/.zshrc.d/81-andover.zsh ; echo '~/.zshrc.d/81-andover.zsh'"
 alias oldec="cd ~/code/academycompass"
 alias ec="cd ~/code/educompass"
 alias amp="cd ~/code/amplify"
+
+# Common commands:
 alias rs="bundle exec rspec"
+alias vici="vim .github/workflows/ci.yml"
 
 # Set up a local server on port 5000 (OSX can't do concurrency):
 alias rserv="WEB_CONCURRENCY=0 bin/rails server -p 5000"
@@ -42,7 +45,7 @@ gpsb() {
     echo "usage: gpsb <branch> [extra git push args, e.g. --force]" >&2
     return 1
   fi
-  git fetch origin && git push staging "origin/$1:refs/heads/main" "${@:2}"
+  git fetch origin && git push staging "origin/${1}:refs/heads/main" "${@:2}"
 }
 
 # Up/Down:
