@@ -15,13 +15,13 @@ alias ampdburl="heroku config:get DATABASE_URL -a andovermath"
 alias ecdburl="heroku config:get DATABASE_URL -a academycompass"
 
 # Consoles!
-alias rcec="ec && heroku run rails console -a academycompass"
+alias rcec="ec && echo 'PRODUCTION!' && heroku run rails console -a academycompass"
 alias rcecs="ec && heroku run rails console -a educompass-staging"
-alias rcamp="ec && heroku run rails console -a andovermath"
+alias rcamp="ec && echo 'PRODUCTION!' && heroku run rails console -a andovermath"
 alias rcamps="ec && heroku run rails console -a amplify-staging"
-alias shec="ec && heroku run bash -a academycompass"
+alias shec="ec && echo 'PRODUCTION!' && heroku run bash -a academycompass"
 alias shecs="ec && heroku run bash -a educompass-staging"
-alias shamp="ec && heroku run bash -a andovermath"
+alias shamp="ec && echo 'PRODUCTION!' && heroku run bash -a andovermath"
 alias shamps="ec && heroku run bash -a amplify-staging"
 
 alias dbecs="heroku pg:psql STAGING_DB -a educompass-staging"
